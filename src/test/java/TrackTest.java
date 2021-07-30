@@ -12,4 +12,13 @@ class TrackTest {
         assertThat(track).isNotNull();
     }
 
+    @Test
+    public void track_shouldHaveTrackContentArray() {
+        Track track = new Track();
+        int[][] contentArray = track.getTrackContent();
+        assertThat(contentArray).isNotNull();
+    }
+
+
+
 }
