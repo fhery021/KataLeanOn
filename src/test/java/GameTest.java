@@ -18,7 +18,7 @@ public class GameTest {
 
     @Test
     void startNewGame_shouldReturnEmptyGameBoard() {
-        assertThat(game.startGame()).isEqualTo(TestHelper.EMPTY_TRACK);
+        assertThat(game.startUp()).isEqualTo(TestHelper.EMPTY_TRACK);
     }
 
 }

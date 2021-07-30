@@ -3,7 +3,7 @@ public class Game {
     private Track track = new Track();
 
 
-    public String startGame() {
+    public String startUp() {
         System.out.println("Game Board Creation..." + "\n");
         track = new Track();
         System.out.println(track.getGameBoard());
