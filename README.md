@@ -3,6 +3,12 @@ This repository contains Katas and their solutions in Java.
 
 Each branch represents one Kata.
 
+Run the application with the following:
+> gradlew run
+
+On windows
+> .\gradlew.bat run
+
 ## 🥋 Tic-Tac-Toe Kata
 
 - The exercise involves developing a Tic-Tac-Toe game strictly adhering to the TDD rules.
