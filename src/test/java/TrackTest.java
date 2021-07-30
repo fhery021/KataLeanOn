@@ -1,11 +1,17 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TrackTest {
+    private Track track;
 
-    Track track = new Track();
+    @BeforeEach
+    public void init() {
+        track = new Track();
+    }
+
 
     @Test
     void track_shouldBeCreated() {
@@ -36,9 +42,11 @@ class TrackTest {
         track.XMoves();
         boolean containsX = false;
         for (int i = 0; i < trackContent.length; i++) {
-            for (int j = 0; j < trackContent.length; j++)
-                if (trackContent[i][j] == 1)
+            for (int j = 0; j < trackContent.length; j++) {
+                if (trackContent[i][j] == 1) {
                     containsX = true;
+                }
+            }
         }
         assertTrue(containsX);
     }
@@ -49,11 +57,18 @@ class TrackTest {
         track.OMoves();
         boolean containsO = false;
         for (int i = 0; i < trackContent.length; i++) {
-            for (int j = 0; j < trackContent.length; j++)
-                if (trackContent[i][j] == 2)
+            for (int j = 0; j < trackContent.length; j++) {
+                if (trackContent[i][j] == 2) {
                     containsO = true;
+                }
+            }
         }
         assertTrue(containsO);
     }
 
+    @Test
+    void O_moves_shouldDrawAndContainO() {
+        track.OMoves();
+        assertTrue(track.getGameBoard().contains("O"));
+    }
 }
