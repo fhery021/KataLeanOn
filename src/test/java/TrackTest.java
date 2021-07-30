@@ -90,6 +90,27 @@ class TrackTest {
 
     }
 
+
+    @Test
+    void track_shouldCheckWinnerO() {
+        track = new Track(fillContentOIsWinner());
+        assertThat(track.checkWinner()).isEqualTo(2);
+
+    }
+
+    private int[][] fillContentOIsWinner() {
+        int[][] content = {
+                {
+                        1, 0, 1
+                }, {
+                        2, 2, 2
+                }, {
+                        1, 0, 0
+                }
+        };
+        return content;
+    }
+
     private int[][] fillContentXIsWinner() {
         int[][] content = {
                 {
