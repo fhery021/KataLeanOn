@@ -13,6 +13,6 @@ public class Game {
     }
 
     public String play() {
-        return null;
+        return startUp();
     }
 }
