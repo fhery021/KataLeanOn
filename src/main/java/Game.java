@@ -11,4 +11,11 @@ public class Game {
         System.out.println("The game will start with player X.");
         return track.getGameBoard();
     }
+
+//    public String play() {
+//        startUp();
+//        track.XMoves();
+//        System.out.println(track.getGameBoard());
+//
+//    }
 }

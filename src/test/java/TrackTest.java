@@ -2,6 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.setAllowComparingPrivateFields;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TrackTest {
@@ -71,12 +72,32 @@ class TrackTest {
     @Test
     void O_moves_shouldDrawAndContainO() {
         track.OMoves();
-        assertTrue(track.getGameBoard().contains("O"));
+        assertTrue(track.getGameBoard()
+                        .contains("O"));
     }
 
     @Test
     void X_moves_shouldDrawAndContainX() {
         track.XMoves();
-        assertTrue(track.getGameBoard().contains("X"));
+        assertTrue(track.getGameBoard()
+                        .contains("X"));
+    }
+
+    @Test
+    void track_shouldCheckWinnerX() {
+        int[][] content = track = new Track(fillContentXIsWinner());
+    }
+
+    private int[][] fillContentXIsWinner() {
+        int[][] content = {
+                {
+                        1, 0, 0
+                }, {
+                        2, 1, 0
+                }, {
+                        2, 0, 1
+                }
+        };
+        return content;
     }
 }

@@ -21,8 +21,8 @@ public class GameTest {
         assertThat(game.startUp()).isEqualTo(TestHelper.EMPTY_TRACK);
     }
 
-    @Test
-    void playNewGame_shouldReturnWinner() {
-        game.play();
-    }
+//    @Test
+//    void playNewGame_shouldReturnWinner() {
+//        game.play();
+//    }
 }
