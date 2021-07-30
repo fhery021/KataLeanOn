@@ -1,3 +1,3 @@
 # Technical debt 📣 📉
 
-- 🤷‍♂ Empty game board should be in some common place (TestHelper) ✔ 
+- 🤷‍♂ Track.getGameBoard is hard-coded for SIZE==3. If requirements will change (SIZE>3), this will fail. 

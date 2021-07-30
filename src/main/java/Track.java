@@ -6,10 +6,6 @@ public class Track {
 
     private int[][] content = new int[SIZE][SIZE];
 
-    // 0 = empty
-    // 1 = X
-    // 2 = O
-
     public Track() {
         for (int row = 0; row < content.length; row++) {
             for (int col = 0; col < content.length; col++) {
