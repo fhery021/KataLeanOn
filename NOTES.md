@@ -9,13 +9,19 @@ Contains the features, plans, and progress.
 
 | Pomodoro | Plan |
 | ------ | ------ |
-| 1. 00:00-00:25  | 📌 Plan for the first Pomodoro cycle  |
-| 2. 00:30-00:55 | 📌 Plan for the second Pomodoro cycle |
-| 3. 01:00-01:25 | 📌 Plan for the third Pomodoro cycle |
-| 4. 01:30-01:55 | 📌 Plan for the fourth Pomodoro cycle |
+| 1. 00:00-00:25  | 📌 Prepare readme, notes with the plan, create the track|
+| 2. 00:30-00:55 | 📌 Put X or O on random positions on the track |
+| 3. 01:00-01:25 | 📌 Decide who wins |
+| 4. 01:30-01:55 | 📌 Refactor and clean-up |
 
 ## 📈 Progress
 
-- ✔ Done with feature one
-- 🔧 Feature two is still in Progress
-- 📌 TODO feature three
+- 📌 Update .md files and do a plan
+- 📌 Create the track
+- 📌 On Every 2 seconds draw the track
+- 📌 Draw the X or O on EMPTY positions
+- 📌 Decide: X wins, O wins, no one yet (step further), draw (track is full, no winner)
+
+> Example entries in the progress: - ✔ Done 🔧 In Progress 📌 TODO
+
+
