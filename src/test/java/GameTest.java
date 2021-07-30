@@ -14,4 +14,10 @@ public class GameTest {
     void game_shouldDrawTrack() {
         assertThat(game.drawGameBoard()).isEqualTo(TestHelper.EMPTY_TRACK);
     }
+
+    @Test
+    void game_startGameShouldPutAnXOnTheTrack() {
+        game.startGame();
+        assertThat(game.drawGameBoard()).contains("X");
+    }
 }
