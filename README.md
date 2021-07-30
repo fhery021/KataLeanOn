@@ -3,43 +3,16 @@ This repository contains Katas and their solutions in Java.
 
 Each branch represents one Kata.
 
-Run the application with the following:
-> gradlew run
-
-On windows
-> .\gradlew.bat run
-
 ## 🥋 Tic-Tac-Toe Kata
 
 - The exercise involves developing a Tic-Tac-Toe game strictly adhering to the TDD rules.
 - The system should run in BOT mode (random BOT moves for player X & O) to print on the screen all the
   player's moves (with a 2 seconds timeout between each round) until someone won or the game ends with
   a draw.
+- https://en.wikipedia.org/wiki/Tic-tac-toe
 
-Empty game board
-  | |
-  -+-+-
-  | |
-  -+-+-
-  | |
+Run the application with the following:
+> gradlew run
 
-Game board when X won
-X| |
--+-+-
-X|O|
--+-+-
-X| |O
-
-Game board when O won
-X| |X
--+-+-
-O|O|O
--+-+-
-X| |
-
-Game board when draw
-X|O|X
--+-+-
-O|O|X
--+-+-
-X|X|O
+On windows
+> .\gradlew.bat run
