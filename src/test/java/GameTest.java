@@ -24,7 +24,7 @@ public class GameTest {
 
     @Test
     void playNewGame_shouldReturnWinner() throws InterruptedException {
-        String winnerMessage  = game.play();
-        assertTrue(winnerMessage.equals("PLAYER X WON") || winnerMessage.equals("PLAYER O WON"));
+        String winnerMessage = game.play();
+        assertTrue(winnerMessage.equals("PLAYER X WON") || winnerMessage.equals("PLAYER O WON") || winnerMessage.equals("GAME ENDS WITH DRAW"));
     }
 }
