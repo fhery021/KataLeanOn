@@ -9,10 +9,10 @@ Contains the features, plans, and progress.
 
 | Pomodoro | Plan |
 | ------ | ------ |
-| 1. 00:00-00:25  | 📌 Prepare readme, notes with the plan, create the track|
-| 2. 00:30-00:55 | 📌 Put X or O on random positions on the track |
-| 3. 01:00-01:25 | 📌 Decide who wins |
-| 4. 01:30-01:55 | 📌 Refactor and clean-up |
+| 1. 09:30-10:00  | 📌 Prepare readme, notes with the plan, create the track|
+| 2. 10:05-10:30 | 📌 Put X or O on random positions on the track |
+| 3. 10:35-11:00 | 📌 Decide who wins |
+| 4. 11:05-11:30 | 📌 Refactor and clean-up |
 
 ## 📈 Progress
 
