@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Track {
@@ -105,9 +104,9 @@ public class Track {
     }
 
     private int horizontalLine() {
-        for (int row = 0; row < content.length; row++) {
-            if ((content[row][0] != 0) && (content[row][0] == content[row][1] && content[row][1] == content[row][2])) {
-                return content[row][0];
+        for (int[] ints : content) {
+            if ((ints[0] != 0) && (ints[0] == ints[1] && ints[1] == ints[2])) {
+                return ints[0];
             }
         }
         return 0;
@@ -138,10 +137,11 @@ public class Track {
 
     private boolean isDraw() {
         boolean trackIsFull = true;
-        for (int row = 0; row < content.length; row++) {
+        for (int[] ints : content) {
             for (int col = 0; col < content.length; col++) {
-                if (content[row][col] == 0) {
+                if (ints[col] == 0) {
                     trackIsFull = false;
+                    break;
                 }
             }
         }

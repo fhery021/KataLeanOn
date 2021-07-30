@@ -129,7 +129,7 @@ class TrackTest {
     }
 
     private int[][] fillContentOIsWinnerHorizontal() {
-        int[][] content = {
+        int[][] oWinnerContent = {
                 {
                         1, 0, 1
                 }, {
@@ -138,11 +138,11 @@ class TrackTest {
                         1, 0, 0
                 }
         };
-        return content;
+        return oWinnerContent;
     }
 
     private int[][] fillContentXIsWinnerDiagonal() {
-        int[][] content = {
+        int[][] xWinnerContent = {
                 {
                         1, 0, 0
                 }, {
@@ -151,11 +151,11 @@ class TrackTest {
                         2, 0, 1
                 }
         };
-        return content;
+        return xWinnerContent;
     }
 
     private int[][] fillContentDraw() {
-        int[][] content = {
+        int[][] drawContent = {
                 {
                         1, 2, 1
                 }, {
@@ -164,11 +164,11 @@ class TrackTest {
                         2, 1, 1
                 }
         };
-        return content;
+        return drawContent;
     }
 
     private int[][] fillContentNoWinnerYet() {
-        int[][] content = {
+        int[][] noWinnerContent = {
                 {
                         1, 0, 1
                 }, {
@@ -177,6 +177,6 @@ class TrackTest {
                         2, 0, 1
                 }
         };
-        return content;
+        return noWinnerContent;
     }
 }
