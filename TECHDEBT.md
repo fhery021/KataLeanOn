@@ -1,3 +1,3 @@
 # Technical debt 📣 📉
 
-- 🤷‍♂ Do this or that better when refactoring
+- 🤷‍♂ Empty game board should be in some common place (TestHelper)

@@ -18,8 +18,8 @@ Contains the features, plans, and progress.
 
 - ✔ Update .md files and do a plan
 - ✔ Create the track
-- 🔧 Create empty track
-- 🔧 On Every 2 seconds draw the track
+- ✔ Create empty track
+- 🔧 On Every 2 seconds draw the track - Game.drawTrack()
 - 📌 Draw the X or O on EMPTY positions
 - 📌 Decide: X wins, O wins, no one yet (step further), draw (track is full, no winner)
 
