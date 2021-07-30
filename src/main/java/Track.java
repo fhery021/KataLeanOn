@@ -6,10 +6,6 @@ public class Track {
 
     private int[][] content = new int[SIZE][SIZE];
 
-    private boolean vertical = false;
-    private boolean horizontal = false;
-    private boolean diagonal = false;
-
     public Track() {
         for (int row = 0; row < content.length; row++) {
             for (int col = 0; col < content.length; col++) {
@@ -67,22 +63,18 @@ public class Track {
         }
         int verticalWinner = verticalLine();
         if (verticalWinner != 0) {
-            this.vertical = true;
             return verticalWinner;
         }
         int horizontalWinner = horizontalLine();
         if (horizontalWinner != 0) {
-            this.horizontal = true;
             return horizontalWinner;
         }
 
         if (checkDiagonal(1)) {
-            this.diagonal = true;
             return 1;
         }
 
         if (checkDiagonal(2)) {
-            this.diagonal = true;
             return 2;
         }
 
@@ -147,17 +139,5 @@ public class Track {
         }
         return trackIsFull;
 
-    }
-
-    boolean isHorizontal() {
-        return horizontal;
-    }
-
-    boolean isVertical() {
-        return vertical;
-    }
-
-    boolean isDiagonal() {
-        return diagonal;
     }
 }
