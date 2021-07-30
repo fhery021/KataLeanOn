@@ -9,13 +9,17 @@ Contains the features, plans, and progress.
 
 | Pomodoro | Plan |
 | ------ | ------ |
-| 1. 00:00-00:25  | 📌 Plan for the first Pomodoro cycle  |
-| 2. 00:30-00:55 | 📌 Plan for the second Pomodoro cycle |
-| 3. 01:00-01:25 | 📌 Plan for the third Pomodoro cycle |
-| 4. 01:30-01:55 | 📌 Plan for the fourth Pomodoro cycle |
+| 1. 00:00-00:25  | 📌 Create the plan and the basic test like for "()" return true  |
+| 2. 00:30-00:55 | 📌 Create advanced test and with more parentheses like "((()))"  |
+| 3. 01:00-01:25 | 📌 Involve [] like "[()]", Involve {} like "{[()]}"  |
+| 4. 01:30-01:55 | 📌 Refactor, beautify |
 
 ## 📈 Progress
 
-- ✔ Done with feature one
-- 🔧 Feature two is still in Progress
-- 📌 TODO feature three
+- 📌 Create simple test only with "()" parentheses.
+- 📌 Long combination of Create simple test only with "()" parentheses.
+- 📌 Involve brackets: [()]
+- 📌 Involve curly braces: {[()]}
+- 📌 Test with long valid or invalid strings of braces: {[()]}
+
+Example entries in the Progress:  ✔ Done 🔧 In Progress 📌 TODO
