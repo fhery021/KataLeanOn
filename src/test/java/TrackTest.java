@@ -41,10 +41,11 @@ class TrackTest {
         int[][] trackContent = track.getTrackContent();
         track.XMoves();
         boolean containsX = false;
-        for (int i = 0; i < trackContent.length; i++) {
+        for (int[] ints : trackContent) {
             for (int j = 0; j < trackContent.length; j++) {
-                if (trackContent[i][j] == 1) {
+                if (ints[j] == 1) {
                     containsX = true;
+                    break;
                 }
             }
         }
@@ -56,10 +57,11 @@ class TrackTest {
         int[][] trackContent = track.getTrackContent();
         track.OMoves();
         boolean containsO = false;
-        for (int i = 0; i < trackContent.length; i++) {
+        for (int[] ints : trackContent) {
             for (int j = 0; j < trackContent.length; j++) {
-                if (trackContent[i][j] == 2) {
+                if (ints[j] == 2) {
                     containsO = true;
+                    break;
                 }
             }
         }
