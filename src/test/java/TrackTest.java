@@ -33,4 +33,10 @@ class TrackTest {
         assertThat(gameBoard).isEqualTo(TestHelper.EMPTY_TRACK);
     }
 
+    @Test
+    void track_X_moves() {
+        String gameBoard = track.getGameBoard();
+        track.XMoves();
+        assertThat(gameBoard).isEqualTo(TestHelper.EMPTY_TRACK);
+    }
 }
