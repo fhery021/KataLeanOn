@@ -46,14 +46,14 @@ class TrackTest {
     @Test
     void track_O_moves() {
         int[][] trackContent = track.getTrackContent();
-        track.XMoves();
-        boolean containsX = false;
+        track.OMoves();
+        boolean containsO = false;
         for (int i = 0; i < trackContent.length; i++) {
             for (int j = 0; j < trackContent.length; j++)
                 if (trackContent[i][j] == 2)
-                    containsX = true;
+                    containsO = true;
         }
-        assertTrue(containsX);
+        assertTrue(containsO);
     }
 
 }

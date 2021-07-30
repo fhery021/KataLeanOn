@@ -33,4 +33,12 @@ public class Track {
                                          .nextInt(0,SIZE-1);
         content[randomRow][randomColumn] = 1;
     }
+
+    public void OMoves() {
+        int randomRow = ThreadLocalRandom.current()
+                                         .nextInt(0,SIZE-1);
+        int randomColumn = ThreadLocalRandom.current()
+                                            .nextInt(0,SIZE-1);
+        content[randomRow][randomColumn] = 2;
+    }
 }
