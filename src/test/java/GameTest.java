@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GameTest {
     private Game game;
@@ -23,8 +24,8 @@ public class GameTest {
     }
 
     @Test
-    void playNewGame_shouldReturnWinner() {
-        assertNotNull(game.play());
-        assertNotNull(game.getWinner());
+    void playNewGame_shouldReturnWinner() throws InterruptedException {
+        String winnerMessage  = game.play();
+        assertTrue(winnerMessage.equals("PLAYER X WON") || winnerMessage.equals("PLAYER O WON"));
     }
 }

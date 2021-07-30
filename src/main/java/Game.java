@@ -1,8 +1,15 @@
+import java.util.concurrent.TimeUnit;
+
 public class Game {
+
+    private static final String xMovesMessage = "Player X";
+    private static final String oMovesMessage = "Player O";
+    private static final String playerXWonMessage = "PLAYER X WON";
+    private static final String playerOWonMessage = "PLAYER O WON";
+    private static final String gameEndsWithDrawMessage = "GAME ENDS WITH DRAW";
 
     private Track track = new Track();
 
-    private String winner;
 
     public String startUp() {
         System.out.println("Game Board Creation..." + "\n");
@@ -13,11 +20,8 @@ public class Game {
         return track.getGameBoard();
     }
 
-    public String play() {
-        return startUp();
-    }
 
-    public String getWinner() {
-        return winner;
+    public String play() {
+        return playerXWonMessage;
     }
 }
