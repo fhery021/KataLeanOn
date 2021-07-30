@@ -23,22 +23,35 @@ public class Track {
     }
 
     public String getGameBoard() {
-        return " | | " + "\n" + "-+-+-" + "\n" + " | | " + "\n" + "-+-+-" + "\n" + " | | ";
+        return xOrO(content[0][0]) + "|" + xOrO(content[0][1]) + "|" + xOrO(content[0][2]) + "\n" + //
+               xOrO(content[1][0]) + "|" + xOrO(content[1][1]) + "|" + xOrO(content[1][2]) + "\n" + //
+               xOrO(content[2][0]) + "|" + xOrO(content[2][1]) + "|" + xOrO(content[2][2]) + "\n";
+    }
+
+    private String xOrO(int content) {
+        switch (content) {
+            case 1:
+                return "X";
+            case 2:
+                return "O";
+            default:
+                return " ";
+        }
     }
 
     public void XMoves() {
         int randomRow = ThreadLocalRandom.current()
-                                         .nextInt(0,SIZE-1);
+                                         .nextInt(0, SIZE - 1);
         int randomColumn = ThreadLocalRandom.current()
-                                         .nextInt(0,SIZE-1);
+                                            .nextInt(0, SIZE - 1);
         content[randomRow][randomColumn] = 1;
     }
 
     public void OMoves() {
         int randomRow = ThreadLocalRandom.current()
-                                         .nextInt(0,SIZE-1);
+                                         .nextInt(0, SIZE - 1);
         int randomColumn = ThreadLocalRandom.current()
-                                            .nextInt(0,SIZE-1);
+                                            .nextInt(0, SIZE - 1);
         content[randomRow][randomColumn] = 2;
     }
 }
