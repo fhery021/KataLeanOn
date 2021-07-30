@@ -2,7 +2,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.setAllowComparingPrivateFields;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TrackTest {
@@ -85,20 +85,50 @@ class TrackTest {
 
     @Test
     void track_shouldCheckWinnerX() {
-        track = new Track(fillContentXIsWinner());
+        track = new Track(fillContentXIsWinnerDiagonal());
         assertThat(track.checkWinner()).isEqualTo(1);
-
+        assertFalse(track.isHorizontal());
+        assertFalse(track.isVertical());
+        assertTrue(track.isDiagonal());
     }
-
 
     @Test
-    void track_shouldCheckWinnerO() {
-        track = new Track(fillContentOIsWinner());
-        assertThat(track.checkWinner()).isEqualTo(2);
-
+    void track_shouldCheckDraw() {
+        track = new Track(fillContentDraw());
+        assertThat(track.checkWinner()).isEqualTo(0);
+        assertFalse(track.isHorizontal());
+        assertFalse(track.isVertical());
+        assertFalse(track.isDiagonal());
     }
 
-    private int[][] fillContentOIsWinner() {
+    @Test
+    void track_shouldCheckNoWinnerYet() {
+        track = new Track(fillContentNoWinnerYet());
+        assertThat(track.checkWinner()).isEqualTo(-1);
+        assertFalse(track.isHorizontal());
+        assertFalse(track.isVertical());
+        assertFalse(track.isDiagonal());
+    }
+
+    @Test
+    void track_shouldCheckWinnerOHorizontal() {
+        track = new Track(fillContentOIsWinnerHorizontal());
+        assertThat(track.checkWinner()).isEqualTo(2);
+        assertTrue(track.isHorizontal());
+        assertFalse(track.isVertical());
+        assertFalse(track.isDiagonal());
+    }
+
+    @Test
+    void track_shouldCheckNoWinnerYetWithEmptyGameBoard() {
+        track = new Track();
+        assertThat(track.checkWinner()).isEqualTo(-1);
+        assertFalse(track.isHorizontal());
+        assertFalse(track.isVertical());
+        assertFalse(track.isDiagonal());
+    }
+
+    private int[][] fillContentOIsWinnerHorizontal() {
         int[][] content = {
                 {
                         1, 0, 1
@@ -111,12 +141,38 @@ class TrackTest {
         return content;
     }
 
-    private int[][] fillContentXIsWinner() {
+    private int[][] fillContentXIsWinnerDiagonal() {
         int[][] content = {
                 {
                         1, 0, 0
                 }, {
                         2, 1, 0
+                }, {
+                        2, 0, 1
+                }
+        };
+        return content;
+    }
+
+    private int[][] fillContentDraw() {
+        int[][] content = {
+                {
+                        1, 2, 1
+                }, {
+                        2, 1, 2
+                }, {
+                        2, 1, 1
+                }
+        };
+        return content;
+    }
+
+    private int[][] fillContentNoWinnerYet() {
+        int[][] content = {
+                {
+                        1, 0, 1
+                }, {
+                        2, 0, 2
                 }, {
                         2, 0, 1
                 }
