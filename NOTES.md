@@ -22,7 +22,8 @@ Contains the features, plans, and progress.
 - ✔ On Every 2 seconds draw the track - Game.drawTrack()
 - ✔ Draw the X or O on EMPTY positions
 - ✔ Draw movements
-- 🔧 Decide: X wins, O wins, no one yet (step further), draw (track is full, no winner)
+- ✔ Decide: X wins, O wins, no one yet (step further), draw (track is full, no winner)
+- 📌 Play the game 
 
 > Example entries in the progress: - ✔ Done 🔧 In Progress 📌 TODO
 
