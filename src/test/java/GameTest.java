@@ -17,20 +17,8 @@ public class GameTest {
     }
 
     @Test
-    void game_shouldDrawTrack() {
-        assertThat(game.drawGameBoard()).isEqualTo(TestHelper.EMPTY_TRACK);
-    }
-
-    @Test
     void startNewGame_shouldReturnEmptyGameBoard() {
-        String expectedOutputOnStart = "Game Board Creation..." + "\n" +
-                                       TestHelper.EMPTY_TRACK +
-                                       "Board Created." + "\n" +
-                                       "The game will start with player X.";
-        String output = game.startGame();
-
-        assertThat(output).isEqualTo(expectedOutputOnStart);
-
+        assertThat(game.startGame()).isEqualTo(TestHelper.EMPTY_TRACK);
     }
 
 }

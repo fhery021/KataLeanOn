@@ -20,7 +20,9 @@ public class Track {
 
     public String getGameBoard() {
         return xOrO(content[0][0]) + "|" + xOrO(content[0][1]) + "|" + xOrO(content[0][2]) + "\n" + //
+               "-+-+-" + "\n" +//
                xOrO(content[1][0]) + "|" + xOrO(content[1][1]) + "|" + xOrO(content[1][2]) + "\n" + //
+               "-+-+-" + "\n" +//
                xOrO(content[2][0]) + "|" + xOrO(content[2][1]) + "|" + xOrO(content[2][2]) + "\n";
     }
 
