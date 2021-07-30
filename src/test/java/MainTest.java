@@ -5,8 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainTest {
 
     @Test
-    void mainTest() {
-        Main.main();
+    void mainTest() throws InterruptedException {
+        String[] args = new String[0];
+        Main.main(args);
     }
 
 }
