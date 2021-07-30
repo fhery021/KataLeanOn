@@ -85,7 +85,7 @@ class TrackTest {
 
     @Test
     void track_shouldCheckWinnerX() {
-        track = new Track(fillContentXIsWinnerDiagonal());
+        track = new Track(TestHelper.GET_X_WINNER_DIAGONAL_CONTENT());
         assertThat(track.checkWinner()).isEqualTo(1);
         assertFalse(track.isHorizontal());
         assertFalse(track.isVertical());
@@ -94,7 +94,7 @@ class TrackTest {
 
     @Test
     void track_shouldCheckDraw() {
-        track = new Track(fillContentDraw());
+        track = new Track(TestHelper.GET_DRAW_CONTENT());
         assertThat(track.checkWinner()).isEqualTo(0);
         assertFalse(track.isHorizontal());
         assertFalse(track.isVertical());
@@ -103,7 +103,7 @@ class TrackTest {
 
     @Test
     void track_shouldCheckNoWinnerYet() {
-        track = new Track(fillContentNoWinnerYet());
+        track = new Track(TestHelper.GET_NO_WINNER_CONTENT());
         assertThat(track.checkWinner()).isEqualTo(-1);
         assertFalse(track.isHorizontal());
         assertFalse(track.isVertical());
@@ -112,7 +112,7 @@ class TrackTest {
 
     @Test
     void track_shouldCheckWinnerOHorizontal() {
-        track = new Track(fillContentOIsWinnerHorizontal());
+        track = new Track(TestHelper.GET_O_WINNER_HORIZONTAL_CONTENT());
         assertThat(track.checkWinner()).isEqualTo(2);
         assertTrue(track.isHorizontal());
         assertFalse(track.isVertical());
@@ -128,55 +128,4 @@ class TrackTest {
         assertFalse(track.isDiagonal());
     }
 
-    private int[][] fillContentOIsWinnerHorizontal() {
-        int[][] oWinnerContent = {
-                {
-                        1, 0, 1
-                }, {
-                        2, 2, 2
-                }, {
-                        1, 0, 0
-                }
-        };
-        return oWinnerContent;
-    }
-
-    private int[][] fillContentXIsWinnerDiagonal() {
-        int[][] xWinnerContent = {
-                {
-                        1, 0, 0
-                }, {
-                        2, 1, 0
-                }, {
-                        2, 0, 1
-                }
-        };
-        return xWinnerContent;
-    }
-
-    private int[][] fillContentDraw() {
-        int[][] drawContent = {
-                {
-                        1, 2, 1
-                }, {
-                        2, 1, 2
-                }, {
-                        2, 1, 1
-                }
-        };
-        return drawContent;
-    }
-
-    private int[][] fillContentNoWinnerYet() {
-        int[][] noWinnerContent = {
-                {
-                        1, 0, 1
-                }, {
-                        2, 0, 2
-                }, {
-                        2, 0, 1
-                }
-        };
-        return noWinnerContent;
-    }
 }
