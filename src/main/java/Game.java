@@ -21,7 +21,47 @@ public class Game {
     }
 
 
-    public String play() {
-        return playerXWonMessage;
+    public String play() throws InterruptedException {
+        startUp();
+        waitTwoSeconds();
+        track.XMoves();
+        System.out.println(track.getGameBoard());
+        boolean currentPlayerIsX = false;
+        while (track.checkWinner() == -1) {
+            if (currentPlayerIsX) {
+                track.XMoves();
+                System.out.println(xMovesMessage);
+                currentPlayerIsX = false;
+            } else {
+                track.OMoves();
+                System.out.println(oMovesMessage);
+                currentPlayerIsX =true;
+            }
+            System.out.println(track.getGameBoard());
+            waitTwoSeconds();
+        }
+        int winner = track.checkWinner();
+
+        if (winner == 0) {
+            System.out.println(gameEndsWithDrawMessage);
+            return gameEndsWithDrawMessage;
+        }
+
+        if (winner == 1) {
+            System.out.println(playerXWonMessage);
+            return playerXWonMessage;
+        }
+
+        if (winner == 2) {
+            System.out.println(playerOWonMessage);
+            return playerOWonMessage;
+        }
+
+        return "";
+    }
+
+
+    private void waitTwoSeconds() throws InterruptedException {
+        TimeUnit.SECONDS.sleep(2);
     }
 }

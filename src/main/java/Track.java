@@ -1,3 +1,5 @@
+import java.util.PrimitiveIterator;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Track {
@@ -42,25 +44,32 @@ public class Track {
     }
 
     public void XMoves() {
-        int randomRow = ThreadLocalRandom.current()
-                                         .nextInt(0, SIZE - 1);
-        int randomColumn = ThreadLocalRandom.current()
-                                            .nextInt(0, SIZE - 1);
-        content[randomRow][randomColumn] = 1;
+        move(1);
     }
 
     public void OMoves() {
-        int randomRow = ThreadLocalRandom.current()
-                                         .nextInt(0, SIZE - 1);
-        int randomColumn = ThreadLocalRandom.current()
-                                            .nextInt(0, SIZE - 1);
-        content[randomRow][randomColumn] = 2;
+        move(2);
     }
 
-    public int checkWinner() {
-        if (isDraw()) {
-            return 0;
+    private void move(int player) {
+        PrimitiveIterator.OfInt randomIterator = new Random().ints(0, SIZE)
+                                                             .iterator();
+        if (!isDraw()) {
+            boolean writable;
+            int randomRow = randomIterator.nextInt();
+            int randomColumn = randomIterator.nextInt();
+            writable = content[randomRow][randomColumn] == 0;
+            while (!writable) {
+                randomRow = randomIterator.nextInt();
+                randomColumn = randomIterator.nextInt();
+                writable = content[randomRow][randomColumn] == 0;
+            }
+            content[randomRow][randomColumn] = player;
         }
+    }
+
+
+    public int checkWinner() {
         int verticalWinner = verticalLine();
         if (verticalWinner != 0) {
             return verticalWinner;
@@ -76,6 +85,10 @@ public class Track {
 
         if (checkDiagonal(2)) {
             return 2;
+        }
+
+        if (isDraw()) {
+            return 0;
         }
 
         return -1;

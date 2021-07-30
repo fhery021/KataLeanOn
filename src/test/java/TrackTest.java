@@ -87,45 +87,30 @@ class TrackTest {
     void track_shouldCheckWinnerX() {
         track = new Track(TestHelper.GET_X_WINNER_DIAGONAL_CONTENT());
         assertThat(track.checkWinner()).isEqualTo(1);
-        assertFalse(track.isHorizontal());
-        assertFalse(track.isVertical());
-        assertTrue(track.isDiagonal());
     }
 
     @Test
     void track_shouldCheckDraw() {
         track = new Track(TestHelper.GET_DRAW_CONTENT());
         assertThat(track.checkWinner()).isEqualTo(0);
-        assertFalse(track.isHorizontal());
-        assertFalse(track.isVertical());
-        assertFalse(track.isDiagonal());
     }
 
     @Test
     void track_shouldCheckNoWinnerYet() {
         track = new Track(TestHelper.GET_NO_WINNER_CONTENT());
         assertThat(track.checkWinner()).isEqualTo(-1);
-        assertFalse(track.isHorizontal());
-        assertFalse(track.isVertical());
-        assertFalse(track.isDiagonal());
     }
 
     @Test
     void track_shouldCheckWinnerOHorizontal() {
         track = new Track(TestHelper.GET_O_WINNER_HORIZONTAL_CONTENT());
         assertThat(track.checkWinner()).isEqualTo(2);
-        assertTrue(track.isHorizontal());
-        assertFalse(track.isVertical());
-        assertFalse(track.isDiagonal());
     }
 
     @Test
     void track_shouldCheckNoWinnerYetWithEmptyGameBoard() {
         track = new Track();
         assertThat(track.checkWinner()).isEqualTo(-1);
-        assertFalse(track.isHorizontal());
-        assertFalse(track.isVertical());
-        assertFalse(track.isDiagonal());
     }
 
 }
