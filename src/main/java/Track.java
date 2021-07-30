@@ -4,6 +4,6 @@ public class Track {
     }
 
     public String getGameBoard() {
-        return null;
+        return " | | " + "\n" + "-+-+-" + "\n" + " | | " + "\n" + "-+-+-" + "\n" + " | | ";
     }
 }
