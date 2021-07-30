@@ -86,7 +86,7 @@ class TrackTest {
     @Test
     void track_shouldCheckWinnerX() {
         track = new Track(fillContentXIsWinner());
-        assertThat(track.checkWinner()).equalsTo(1);
+        assertThat(track.checkWinner()).isEqualTo(1);
 
     }
 

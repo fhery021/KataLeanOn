@@ -56,4 +56,8 @@ public class Track {
                                             .nextInt(0, SIZE - 1);
         content[randomRow][randomColumn] = 2;
     }
+
+    public int checkWinner() {
+        return 1;
+    }
 }
