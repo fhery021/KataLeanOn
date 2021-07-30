@@ -2,6 +2,7 @@ public class Game {
 
     private Track track = new Track();
 
+    private String winner;
 
     public String startUp() {
         System.out.println("Game Board Creation..." + "\n");
@@ -14,5 +15,9 @@ public class Game {
 
     public String play() {
         return startUp();
+    }
+
+    public String getWinner() {
+        return winner;
     }
 }

@@ -25,5 +25,6 @@ public class GameTest {
     @Test
     void playNewGame_shouldReturnWinner() {
         assertNotNull(game.play());
+        assertNotNull(game.getWinner());
     }
 }
