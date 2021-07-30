@@ -35,8 +35,14 @@ class TrackTest {
 
     @Test
     void track_X_moves() {
-        String gameBoard = track.getGameBoard();
+        int[][] trackContent = track.getTrackContent();
         track.XMoves();
-        assertThat(gameBoard).isEqualTo(TestHelper.EMPTY_TRACK);
+        boolean containsX = false;
+        for (int i = 0; i < trackContent.length; i++) {
+            for (int j = 0; j < trackContent.length; j++)
+                if (trackContent[i][j] == 1)
+                    containsX = true;
+        }
+        assertTrue(containsX);
     }
 }
