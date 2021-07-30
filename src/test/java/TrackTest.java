@@ -71,4 +71,10 @@ class TrackTest {
         track.OMoves();
         assertTrue(track.getGameBoard().contains("O"));
     }
+
+    @Test
+    void X_moves_shouldDrawAndContainX() {
+        track.XMoves();
+        assertTrue(track.getGameBoard().contains("X"));
+    }
 }
