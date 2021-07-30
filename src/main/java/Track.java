@@ -14,6 +14,10 @@ public class Track {
         }
     }
 
+    public Track(int[][] content) {
+        this.content = content;
+    }
+
     public int[][] getTrackContent() {
         return content;
     }
