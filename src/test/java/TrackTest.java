@@ -21,11 +21,21 @@ class TrackTest {
         assertThat(contentArray).isNotNull();
     }
 
-
     @Test
     void track_shouldHaveGameBoard() {
         String gameBoard = track.getGameBoard();
         assertThat(gameBoard).isNotNull();
+    }
+
+    @Test
+    void emptyGameBoard_shouldLookLikeInRequirements() {
+        String expectedGameBoard = " | | "+ "\n" +
+                                   "-+-+-" + "\n" +
+                                   " | | " + "\n" +
+                                   "-+-+-" + "\n"+
+                                   " | | ";
+        String gameBoard = track.getGameBoard();
+        assertThat(gameBoard).isEqualTo(expectedGameBoard);
     }
 
 }

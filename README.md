@@ -9,3 +9,31 @@ Each branch represents one Kata.
 - The system should run in BOT mode (random BOT moves for player X & O) to print on the screen all the
   player's moves (with a 2 seconds timeout between each round) until someone won or the game ends with
   a draw.
+
+Empty game board
+  | |
+  -+-+-
+  | |
+  -+-+-
+  | |
+
+Game board when X won
+X| |
+-+-+-
+X|O|
+-+-+-
+X| |O
+
+Game board when O won
+X| |X
+-+-+-
+O|O|O
+-+-+-
+X| |
+
+Game board when draw
+X|O|X
+-+-+-
+O|O|X
+-+-+-
+X|X|O
