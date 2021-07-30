@@ -70,6 +70,9 @@ public class Track {
 
 
     public int checkWinner() {
+        if (isDraw()) {
+            return 0;
+        }
         int verticalWinner = verticalLine();
         if (verticalWinner != 0) {
             return verticalWinner;
@@ -85,10 +88,6 @@ public class Track {
 
         if (checkDiagonal(2)) {
             return 2;
-        }
-
-        if (isDraw()) {
-            return 0;
         }
 
         return -1;

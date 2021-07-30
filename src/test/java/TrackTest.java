@@ -109,7 +109,6 @@ class TrackTest {
 
     @Test
     void track_shouldCheckNoWinnerYetWithEmptyGameBoard() {
-        track = new Track();
         assertThat(track.checkWinner()).isEqualTo(-1);
     }
 
