@@ -1,10 +1,7 @@
-import org.assertj.core.api.Assert;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class TrackTest {
 
@@ -45,4 +42,18 @@ class TrackTest {
         }
         assertTrue(containsX);
     }
+
+    @Test
+    void track_O_moves() {
+        int[][] trackContent = track.getTrackContent();
+        track.XMoves();
+        boolean containsX = false;
+        for (int i = 0; i < trackContent.length; i++) {
+            for (int j = 0; j < trackContent.length; j++)
+                if (trackContent[i][j] == 2)
+                    containsX = true;
+        }
+        assertTrue(containsX);
+    }
+
 }
