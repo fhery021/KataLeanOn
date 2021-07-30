@@ -29,13 +29,8 @@ class TrackTest {
 
     @Test
     void emptyGameBoard_shouldLookLikeInRequirements() {
-        String expectedGameBoard = " | | "+ "\n" +
-                                   "-+-+-" + "\n" +
-                                   " | | " + "\n" +
-                                   "-+-+-" + "\n"+
-                                   " | | ";
         String gameBoard = track.getGameBoard();
-        assertThat(gameBoard).isEqualTo(expectedGameBoard);
+        assertThat(gameBoard).isEqualTo(TestHelper.EMPTY_TRACK);
     }
 
 }

@@ -1,3 +1,3 @@
 # Technical debt 📣 📉
 
-- 🤷‍♂ Empty game board should be in some common place (TestHelper)
+- 🤷‍♂ Empty game board should be in some common place (TestHelper) ✔ 

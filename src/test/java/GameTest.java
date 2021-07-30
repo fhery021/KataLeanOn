@@ -12,12 +12,6 @@ public class GameTest {
 
     @Test
     void game_shouldDrawTrack() {
-        String emptyGameBoard = " | | "+ "\n" +
-                                   "-+-+-" + "\n" +
-                                   " | | " + "\n" +
-                                   "-+-+-" + "\n"+
-                                   " | | ";
-        assertThat(game.drawGameBoard).isEqualTo(emptyGameBoard);
-
+        assertThat(game.drawGameBoard()).isEqualTo(TestHelper.EMPTY_TRACK);
     }
 }
