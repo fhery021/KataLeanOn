@@ -25,6 +25,7 @@ class TrackTest {
     @Test
     void track_shouldHaveGameBoard() {
         String gameBoard = track.getGameBoard();
+        assertThat(gameBoard).isNotNull();
     }
 
 }
